@@ -106,13 +106,6 @@ void AEnemy::Tick(float DeltaTime)
 	{
 		CombatMotionWarping();
 	}
-
-	/*
-	for (FAttackSettings Attack : BaseAttackSettings)
-	{
-		GEngine->AddOnScreenDebugMessage(index, -1, FColor::White, FString::Printf(TEXT("Speed: %f"), Attack.AttackSpeed));
-		index++;
-	}*/
 }
 
 
@@ -133,13 +126,11 @@ void AEnemy::CombatTick()
 	if (bIsDead) return;
 	if (IsOutsideCombatRadius())
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Fuori Portata!"));
 		LoseInterest();
 		if (EnemyState != EEnemyState::EES_Engaged) StartPatrol();
 	}
 	else if (IsOutsideAttackRadius())
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Rincorro!"));
 		if (EnemyState != EEnemyState::EES_Engaged &&
 			EnemyState != EEnemyState::EES_HitReact) ChaseTarget();
 	}
@@ -344,7 +335,6 @@ void AEnemy::ClearAttackTImer()
 
 void AEnemy::StartCombo()
 {
-	//TODO: Se cambiare il nome in AttackType
 	AttackSeries = FMath::RandRange(1, BaseAttackSettings.Num());
 	NextCombo(); 
 }
@@ -387,7 +377,6 @@ void AEnemy::AttackEnd()
 {
 	ResetCombo();
 	
-	//if (AttackSeries > 0) return;
 	EnemyState = EEnemyState::EES_Unoccupied;
 }
 
@@ -530,4 +519,5 @@ void AEnemy::PawnSeen(APawn* Pawn)
 	
 	ClearPatrolTimer();
     ChaseTarget();
+
 }
