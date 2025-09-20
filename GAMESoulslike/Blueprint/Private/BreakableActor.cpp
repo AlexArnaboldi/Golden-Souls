@@ -72,10 +72,8 @@ void ABreakableActor::TresureSpawn()
 {
 	if (bIsBroken) { return; }
 	bIsBroken = true;
-	//UE_LOG(LogTemp, Warning, TEXT("BreakableActor::TresureSpawn SpawnActor"));
     if (TresureClasses.Num() > 0)
     {
-    	//TODO: provare a mettere il geometry come actorlocation
     	FVector SpawnLocation = GetActorLocation();
     	SpawnLocation.Z += 100.f;
 
@@ -120,5 +118,3 @@ void ABreakableActor::BreakingActor(const FChaosBreakEvent& BreakEvent)
 	bIsBroken = true;
 	
 }
-
-//TODO: Risolvere la questione mesh e capsule e GetActorLocation() come spawn del tresure 
