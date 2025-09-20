@@ -30,9 +30,6 @@ void AMyClass::Tick(float DeltaTime)
 	SetActorLocation(NewLocation);
 	
 	DrawDebugSphere(GetWorld(),GetActorLocation(), 50.0f, 12, FColor::Red);
-
-	//GEngine->AddOnScreenDebugMessage(2, 5.f, FColor::Green, FString::Printf(TEXT("Tempo per inversione: %f secondi"), TimeToInvert));
-	//GEngine->AddOnScreenDebugMessage(1, 0.f, FColor::Red, FString::Printf(TEXT("%f"), Velocity));
 }
 
 float AMyClass::SetSin(float InValue)
@@ -45,4 +42,5 @@ float AMyClass::SetCos(float InValue)
 {
 	float OffSet = Amplitude * FMath::Cos(InValue * Speed);
 	return OffSet;
+
 }
