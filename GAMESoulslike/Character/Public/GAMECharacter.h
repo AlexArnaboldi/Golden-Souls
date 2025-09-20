@@ -156,8 +156,6 @@ protected:
 	float DodgeSpeed = 1.f;
 	UPROPERTY(EditAnywhere, Category = "Config | Montages | Dodge")
 	FName DodgeName = NAME_None;
-	/*UPROPERTY(EditAnywhere, Category = "Config | Dodge")
-	float DodgeDuration = 0.f;      se voglio metterla a durate invece che fissa*/
 	UPROPERTY(EditAnywhere, Category = "Config | Dodge")
 	float DodgeResetComboDelay = 1.f;
 	FTimerHandle ResetComboTimer;
@@ -311,4 +309,5 @@ private:
 		UFUNCTION(BlueprintCallable, meta=(AllowPrivateAccess = true))
 		void SetHUDSouls();
 		void SetHUDWeaponDamage();
+
 };	
