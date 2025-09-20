@@ -1,6 +1,8 @@
 # Golden Souls
 
-[![Watch the Trailer](images/golden-souls-thumbnail.png)](https://youtu.be/hhxUN1yKkK8)
+[![Watch the Trailer](Images/GoldSouls-Overview.png)](https://youtu.be/hhxUN1yKkK8)
+
+**Click on the image below to watch the trailer for Golden Souls!**
 
 ---
 
@@ -32,10 +34,10 @@ It was built using Unreal Engine 5 and C++, combining structured learning from a
 
 ## Screenshots
 
-![Dungeon Entrance](images/GoldenSouls-Overview2.png)  
-![AnimationBlueprint](images/AnimationBlueprint.png)  
-![Control Rig](images/ControlRig.png)
-![Anim Montage](images/AnimMontage.png)
+![Dungeon Entrance](Images/GoldenSouls-Overview2.png)  
+![AnimationBlueprint](Images/AnimationBlueprint.png)  
+![Control Rig](Images/ControlRig.png)
+![Anim Montage](Images/AnimMontage.png)
 
 ---
 
