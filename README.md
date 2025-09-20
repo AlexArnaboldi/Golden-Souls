@@ -18,17 +18,14 @@ It was built using Unreal Engine 5 and C++, combining structured learning from a
 
 ## What I Learned
 
-- Building an open world using Landscape and Foliage tools  
-- Creating realistic environments with Quixel Megascans  
-- Developing melee combat systems with swords and root motion via Motion Warping  
-- Implementing health bars, player stats, and enemy AI  
-- Using Packed Level Instances to import dungeon levels into the open world  
-- Designing multiple enemy types: humanoids, monsters, and creatures  
-- Working with Niagara for particle effects (blood splatter, weapon trails)  
-- Integrating MetaSounds for dynamic and high-quality audio  
-- Applying clean coding practices in C++ with data structures and design patterns  
-- Creating complex Animation Blueprints, retargeting, and Control Rig setups with inverse kinematics  
-- Debugging and refactoring for performance and scalability
+- Designed an open-world environment using Unreal Engine 5's Landscape and Foliage systems
+- Built complex Animation Blueprints, retargeted animations, and used Control Rig with inverse kinematics for visual polish
+- Built complex Animation Blueprints, retargeted animations, and used Control Rig with inverse kinematics for visual polish
+- Developed melee combat systems with swords and other weapons, including Motion Warping for root motion animations
+- Implemented health bars, player stats, and enemy AI with attack logic
+- Created multiple enemy types, from humanoid warriors to monstrous creatures
+- Applied best coding practices in C++, including use of data structures, algorithms, and design patterns
+- Refactored codebase for clarity and maintainability, with strong emphasis on debugging and performance optimization
 
 ---
 
