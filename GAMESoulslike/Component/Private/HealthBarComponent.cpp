@@ -32,11 +32,11 @@ void UHealthBarComponent::SetHealthBarPercent(float InPercent)
 {
 	if (!HealthBarWidget || !HealthBarWidget->HealthBar) { return; }
 	HealthBarWidget->HealthBar->SetPercent(InPercent);
-	//TODO: Cambiare il colore da verde a Rosso in base alla vita mancante.
 }
 
 void UHealthBarComponent::SetHealthBarColorDamage(float InPercent)
 {
 	if (!HealthBarWidget || !HealthBarWidget->HealthBar) { return; }
 	HealthBarWidget->SetHealthBarColor(InPercent);
+
 }
