@@ -86,8 +86,6 @@ void AGAMECharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//GEngine->AddOnScreenDebugMessage(0, -1.f, FColor::Red, FString::Printf(TEXT("Velocity: %f"), GetCharacterMovement()->Velocity.Length()));
-
 	if (bIsRun) AttributesComponent->UseStamina(AttributesComponent->GetStaminaRunCost() * DeltaTime);
 	
 	StaminaRegeneration(DeltaTime);
@@ -132,18 +130,6 @@ void AGAMECharacter::Move(const FInputActionValue& InValue)
 	const FRotator ControllerRotation = GetControlRotation();
 	const FRotator YawRotation(0.f, ControllerRotation.Yaw, 0.f);
 
-	// ------- Per Il SetActor ma dovrei calcolare anche rotazione
-	/*
-	float Speed = 10.f;
-	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X) * MovementDirection.Y * Speed;
-	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y) * MovementDirection.X * Speed;
-
-	
-	const FVector Direction = GetActorLocation() +(ForwardDirection + RightDirection);
-	SetActorLocation(Direction);
-	*/
-
-	// -------- Usando il character movement component
 	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
@@ -243,7 +229,6 @@ void AGAMECharacter::Attack(const FInputActionValue& InValue)
 		{
 			ActionState = EActionState::EAS_Attacking;
 			JumpAttack(EquipUnequipMontage);
-			//TODO: Stamina salto attack
 		}
 		else
 		{
@@ -407,7 +392,7 @@ void AGAMECharacter::OneHandedAttack(UAnimMontage* InMontage)
 
 	if (GetCharacterMovement()->Velocity.Length() > VelocityRunAttack)
 	{
-		// Attack in run
+		// Attack when he is running
 		EquippedWeapon->SetOwnerBonusDamage(RunAttackSettings.BonusDamage);
 		PlayAttackMontage(RunAttackSettings, InMontage);
 		return;
@@ -901,3 +886,4 @@ void AGAMECharacter::SetHUDWeaponDamage()
 		OnWeaponDamageUpdate.Broadcast(EquippedWeapon->GetDamage());
 	}
 }
+
