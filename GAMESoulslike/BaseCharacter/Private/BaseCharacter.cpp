@@ -102,9 +102,7 @@ int ABaseCharacter::DirectionalHitReact(const FVector& InImpactPoint,  AActor* I
 		Theta *= -1;
 	}
 
-	/*UE_LOG(LogTemp, Warning, TEXT("Theta: %f"), Theta);
-
-	// ------- DEBUG ARROWS ------
+	/*// ------- DEBUG ARROWS ------
 	DrawDebugDirectionalArrow(GetWorld(), GetActorLocation(), GetActorLocation() + GetActorForwardVector() * 60.f,
 		5.f, FColor::Red, false, 10.f);
 	DrawDebugDirectionalArrow(GetWorld(), GetActorLocation(), GetActorLocation() + HitPoint * 60.f,
@@ -175,3 +173,4 @@ FName ABaseCharacter::RandomSectionName(const TArray<FName>& InSectionNames)
 	int Section = FMath::RandRange(0, InSectionNames.Num() - 1);
 	return InSectionNames[Section];
 }
+
